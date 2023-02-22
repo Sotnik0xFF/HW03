@@ -11,7 +11,6 @@ namespace HW03
 
             var userInfo = GetUser();
             DisplayUserInfo(userInfo);
-
         }
 
         static (string FirstName, string LastName, int Age, string[] Pets, string[] FavoriteColors) GetUser()
@@ -93,7 +92,7 @@ namespace HW03
 
         static bool IsValidNumber(string number, out int corrnumber) => Int32.TryParse(number, out corrnumber) && corrnumber > 0;
 
-        static bool IsValidText(string name) => !String.IsNullOrWhiteSpace(name);
+        static bool IsValidText(string text) => !String.IsNullOrWhiteSpace(text);
 
         static void DisplayUserInfo((string FirstName, string LastName, int Age, string[] Pets, string[] FavoriteColors) user)
         {
@@ -120,7 +119,7 @@ namespace HW03
             {
                 Console.WriteLine($"\t{color}");
             }
-            Console.WriteLine(Environment.NewLine + "****************************************");
+            Console.WriteLine("****************************************");
         }
     }
 }
